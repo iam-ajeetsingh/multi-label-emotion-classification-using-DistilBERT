@@ -35,8 +35,6 @@ My favourite food is anything I didn't have to cook myself.,0,0,0,0,0,0,0
 Yes I heard abt the f bombs! That has to be why. Thanks for your reply:) until then hubby and I will anxiously wait 😝,0,0,1,0,0,0,0
 ```
 
-
-
 For example, the third entry in train dataset contains the text:
 
 Yes I heard abt the f bombs! That has to be why. Thanks for your reply:) until then hubby and I will anxiously wait 😝
@@ -56,4 +54,35 @@ The test data is unlabeled, with all label columns containing 0s. The task is to
 submission should be a ZIP file containing a single CSV file. The CSV file should have the same format as the training data, with the text in the first column and your model's predictions (0 or 1) for each emotion in the remaining columns. The file should be named submission.zip.
 
 
+## 3. Project Implementation
 
+### Features
+
+- **DistilBERT Integration**: Utilizes the pre-trained DistilBERT model for better contextual understanding of text.
+- **Custom Neural Network Layers**: Includes additional dense layers with dropout and batch normalization for improved performance.
+- **Learning Rate Scheduler**: Dynamically adjusts the learning rate during training for optimal convergence.
+- **Advanced Callbacks**: Implements early stopping, model checkpointing, and learning rate reduction on plateau.
+- **Micro F1-Score Optimization**: Achieved a best micro F1-Score of **0.85495** on the validation set.
+
+### Results
+
+- **Fully Connected Neural Network**: Achieved a micro F1-Score of **0.82703** after extensive hyperparameter tuning.
+- **DistilBERT Model**: Improved the micro F1-Score to **0.85495** by leveraging the pre-trained DistilBERT model and additional optimizations.
+
+## 4. Setup Instructions
+
+1. Clone the repository and navigate to the project directory.
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Prepare your dataset in CSV format with the following structure:
+- The first column should contain the text data.
+- Subsequent columns should contain binary labels (0 or 1) for each emotion.
+
+## 5. Acknowledgments
+
+- Hugging Face Transformers library for providing the DistilBERT model.
+- TensorFlow for enabling the creation and training of the neural network.
+- INFO557 instructor for providing the dataset and guidance.
+   
